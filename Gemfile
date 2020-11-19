@@ -65,4 +65,4 @@ gem 'devise'
 gem 'therubyracer'
 gem 'jquery-rails'
 gem "font-awesome-rails"
-
+gem "carrierwave"
