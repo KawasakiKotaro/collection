@@ -4,5 +4,7 @@ class ReviewsController < ApplicationController
         @reviews = Review.all
     end
     
+    def new
+    end
     
 end
