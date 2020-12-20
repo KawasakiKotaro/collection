@@ -5,6 +5,16 @@ class ReviewsController < ApplicationController
     end
     
     def new
+       @review=Review.new 
+    end
+    
+    def create
+        Review.create(review_params)
+    end
+    
+    private
+    def review_params
+        params.require(:review).permit(:image, :text, :title, :rate)
     end
     
 end

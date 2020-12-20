@@ -10,6 +10,29 @@
   </head>
 
   <body>
+  <header  class="header">
+      <div class="header_logo" >
+        <h1><a>Collection</a>         
+          <% if user_signed_in? %>
+            <div class="nav">
+              <ul class="nav_name">
+              <%= link_to "マイページ","/users/#{current_user.id}" %>
+              <%= link_to "ログアウトする", destroy_user_session_path, method: :delete %>
+              <%= link_to "投稿する", "/reviews/new" %>
+             </ul>
+            </div>
+          <% else %>
+            <div class="nav">
+             <ul class="nav_name">
+          
+              <%= link_to "ログイン", new_user_session_path %>
+              <%= link_to "新規登録", new_user_registration_path %>
+            
+             </ul>
+            </div>
+          <% end %>
+          </h1>
+      </div>
     <%= yield %>
   </body>
 </html>
