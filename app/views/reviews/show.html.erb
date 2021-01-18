@@ -1,12 +1,16 @@
-<div class = "content_show">
-    <div class = "content_show_image">
-        <%= image_tag "#{@review.image}" %>
-    </div>
-    <div class = "content_show_title">
-        <%= simple_format(@review.title) %>
-    </div>
-    <div class = "content_show_text">
-        <%= simple_format(@review.text) %>
+<div>
+    <div class = "content_show">
+        <div class = "content_show_image">
+            <%= image_tag "#{@review.image}" %>
+        </div>
+        <div class = "content_show_title">
+            <%= simple_format(@review.title) %>
+        </div>
+        <div class = "content_show_text">
+            <%= simple_format(@review.text) %>
+        </div>
     </div>
     
+    <%= link_to "コメントを投稿する", "/comments/new" %>
+
 </div>

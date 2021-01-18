@@ -1,0 +1,20 @@
+<div>
+    <div>
+        <h2><%= current_user.email %><span>さんのマイページ</span></h2>
+             <% @reviews.each do |review| %>
+            <div class = "content_image">
+                 <p><%= image_tag "#{review.image}" %></p>
+            </div>
+            <div class = "cocntent_text">
+             <p><%= review.title %></p>
+            </div>
+            
+          <% end %>
+        <%= link_to "レビューを投稿する", "/reviews/new" %>
+        <%= link_to "コメントを投稿する", "/comments/new" %>
+        
+    </div>
+    
+</div>
+
+ 

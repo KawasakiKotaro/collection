@@ -5,7 +5,7 @@ class ReviewsController < ApplicationController
     end
     
     def new
-       @review=Review.new 
+        @review=Review.new 
     end
     
     def create
@@ -15,6 +15,11 @@ class ReviewsController < ApplicationController
     def show
         @review = Review.find(params[:id])
     end
+    
+    def edit
+        @review = Review.find(params[:id])
+    end
+    
     
     private
     def review_params
